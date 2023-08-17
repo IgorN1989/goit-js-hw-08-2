@@ -1,1 +1,0 @@
-{"mappings":"AAAAA,MAAQ,EACR,IAAK,IAAIC,EAAI,EAAGA,EAAI,GAAIA,GAAK,EAC3BD,OAAS,EACTE,QAAQC,IAAIH,OAGdE,QAAQC,IAAI","sources":["src/index.js"],"sourcesContent":["count = 0;\nfor (let i = 0; i < 10; i += 1) {\n  count += 1;\n  console.log(count);\n}\n\nconsole.log('hello world');\n"],"names":["count","i","console","log"],"version":3,"file":"index.7f2e7143.js.map"}
