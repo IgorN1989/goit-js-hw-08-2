@@ -6,6 +6,13 @@ const galleryRef = document.querySelector('.gallery');
 
 galleryRef.insertAdjacentHTML('beforeend', createGalleryMarkup(galleryItems));
 
+const optionsForLightBox = {
+  captionsData: 'alt',
+  captionDelay: 250,
+};
+
+let lightbox = new SimpleLightbox('.gallery a', optionsForLightBox);
+
 function createGalleryMarkup(gallery) {
   return gallery
     .map(({ preview, original, description }) => {
@@ -17,10 +24,3 @@ function createGalleryMarkup(gallery) {
     })
     .join('');
 }
-
-const optionsForLightBox = {
-  captionsData: 'alt',
-  captionDelay: 250,
-};
-
-let lightbox = new SimpleLightbox('.gallery a', optionsForLightBox);
