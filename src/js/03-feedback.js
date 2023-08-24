@@ -6,7 +6,7 @@ const refs = {
   message: document.querySelector('[name="message"]'),
 };
 const SAVED_FEEDBACK_KEY = 'feedback-form-state';
-const savedData = JSON.parse(localStorage.getItem(SAVED_FEEDBACK_KEY)) ?? {};
+let savedData = JSON.parse(localStorage.getItem(SAVED_FEEDBACK_KEY)) ?? {};
 
 autocompleteFields();
 
@@ -20,9 +20,10 @@ function onFormInput(evt) {
 
 function onFormSubmit(evt) {
   evt.preventDefault();
+  console.log(savedData);
+  savedData = {};
   evt.currentTarget.reset();
   localStorage.removeItem(SAVED_FEEDBACK_KEY);
-  console.log(savedData);
 }
 
 function autocompleteFields() {
